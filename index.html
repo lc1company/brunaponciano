@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Ponciano</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4c430; /* Cor de fundo dourado */
+            color: #000; /* Cor do texto preto */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos para o banner com a logo */
+        .banner {
+            background-color: #f4c430; /* Cor de fundo preta */
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 200px; /* Altere o tamanho da logo conforme necessário */
+            height: 200px; /* Altere o tamanho da logo conforme necessário */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Estilos para o banner de imagens */
+        .slideshow-container {
+            max-width: 100%; /* Largura ajustável ao seu gosto */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Container para o conteúdo principal */
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Estilos para os serviços */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: rgb(0, 0, 0); /* Cor de fundo branca para o container */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .service {
+            background-color: #f4b52b; /* Cor de fundo dourado claro */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #000; /* Cor do texto preto */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            margin: 20px;
+        }
+
+        .service img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .service h3 {
+            margin: 10px 0;
+            color: #000000; /* Cor de texto preto */
+        }
+
+        .service p {
+            margin: 5px 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #000000; /* Cor de botão preto */
+            color: #f2c562; /* Cor do texto dourado */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button-cancel {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Estilos para a caixa de agendamento (inicialmente oculta) */
+        #booking-form {
+            display: none;
+            background-color: #f4b52b; /* Cor de fundo dourado claro */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #000; /* Cor do texto preto */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #booking-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #booking-form input, #booking-form select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-container-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-form {
+            background-color: #000000; /* Cor de botão preto */
+            color: #f2c562; /* Cor do texto dourado */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px; /* Aumenta a margem entre os botões */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Banner com Logo -->
+    <div class="banner">
+        <img class="logo" src="logo.jpeg" alt="Logo do Salão">
+    </div>
+
+    <!-- Slideshow de Imagens -->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="spa.jpeg" alt="Imagem 1">
+        </div>
+
+        <div class="mySlides">
+            <img src="reconstrucao.jpeg" alt="Imagem 2">
+        </div>
+
+        <div class="mySlides">
+            <img src="spa.jpeg" alt="Imagem 3">
+        </div>
+
+        <div class="mySlides">
+            <img src="slide1.jpeg" alt="Imagem 4">
+        </div>
+
+        <div class="mySlides">
+            <img src="slide2.jpeg" alt="Imagem 5">
+        </div>
+
+        <div class="mySlides">
+            <img src="slide3.jpeg" alt="Imagem 6">
+        </div>
+
+        <div class="mySlides">
+            <img src="slide4.jpeg" alt="Imagem 7">
+        </div>
+
+        <div class="mySlides">
+            <img src="slide5.jpeg" alt="Imagem 8">
+        </div>
+
+        <div class="mySlides">
+            <img src="slide6.jpeg" alt="Imagem 9">
+        </div>
+
+        <div class="mySlides">
+            <img src="slide7.jpeg" alt="imagem 10">
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <h1>Bruna Ponciano Nails designer</h1>
+
+        <!-- Container para os serviços -->
+        <div class="container">
+            <!-- Serviço 1 -->
+            <div class="service">
+                <img src="alongamento.jpeg" alt="Alongamento Gel na tips">
+                <h3>Alongamento Gel na tips</h3>
+                <p>Preço: R$ 130,00</p>
+                <div class="button-container">
+                    <button class="button" onclick="showBookingForm('Alongamento Gel na tips', 130)">Agendar Serviço</button>
+                </div>
+            </div>
+
+            <!-- Adicione mais serviços de manicure aqui... -->
+
+            <!-- Serviço 2 -->
+            <div class="service">
+                <img src="alongamento fibra de vidro.jpeg" alt="Alongamento Fibra de Vidro">
+                <h3>Alongamento Fibra de Vidro</h3>
+                <p>Preço: R$ 150,00</p>
+                <div class="button-container">
+                    <button class="button" onclick="showBookingForm('Alongamento Fibra de Vidro', 150)">Agendar Serviço</button>
+                </div>
+            </div>
+
+            <!-- Serviço 3 -->
+            <div class="service">
+                <img src="pe.jpeg" alt="Pe">
+                <h3>Pé</h3>
+                <p>Preço: R$ 30,00</p>
+                <div class="button-container">
+                    <button class="button" onclick="showBookingForm('Pé', 30)">Agendar Serviço</button>
+                </div>
+            </div>
+
+            <!-- Serviço 4 -->
+            <div class="service">
+                <img src="mao.jpeg" alt="mao">
+                <h3>Mão</h3>
+                <p>Preço: R$ 25,00</p>
+                <div class="button-container">
+                    <button class="button" onclick="showBookingForm('mão', 25)">Agendar Serviço</button>
+                </div>
+            </div>
+
+            <!-- Serviço 5 -->
+            <div class="service">
+                <img src="spa.jpeg" alt="Spa dos pes">
+                <h3>SPA dos Pés</h3>
+                <p>Preço: R$ 70,00</p>
+                <div class="button-container">
+                    <button class="button" onclick="showBookingForm('Spa dos Pés', 70)">Agendar Serviço</button>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="reconstrucao.jpeg" alt="reconstrucao unha do pe">
+                <h3>Reconstrução da unha do Pé</h3>
+                <p>Preço: R$ 20,00 cada unha</p>
+                <div class="button-container">
+                    <button class="button" onclick="showBookingForm('Reconstrução da unha do Pe', 20)">Agendar Serviço</button>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="logo.jpeg" alt="Pacotes mensais">
+                <h3>Pacotes Mensais (4 Mãos e 2 Pés)</h3>
+                <p>Preço: R$ 130</p>
+                <div class="button-container">
+                    <button class="button" onclick="showBookingForm('Pacotes Mensais', 130)">Agendar Serviço</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Caixa de Agendamento (inicialmente oculta) -->
+        <div id="booking-form">
+            <h2>Agendar Serviço de Manicure</h2>
+            <form>
+                <label for="customer-name">Nome do Cliente:</label>
+                <input type="text" id="customer-name" required><br>
+
+                <label for="appointment-date">Data do Agendamento:</label>
+                <input type="date" id="appointment-date" required><br>
+
+                <label for="appointment-time">Horário do Agendamento:</label>
+                <input type="time" id="appointment-time" required><br>
+
+                <input type="hidden" id="selected-service">
+                <input type="hidden" id="selected-preco">
+
+                <div class="button-container-form">
+                    <button class="button-form" onclick="finalizeBooking()">Finalizar</button>
+                    <button class="button-form button-cancel" onclick="hideBookingForm()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Função para exibir a caixa de agendamento com os detalhes do serviço selecionado
+        function showBookingForm(serviceName, servicePrice) {
+            const bookingForm = document.getElementById("booking-form");
+            const customerNameInput = document.getElementById("customer-name");
+
+            customerNameInput.value = ""; // Limpa o campo do nome do cliente
+
+            // Preenche o nome do serviço e preço nos campos ocultos
+            document.getElementById("selected-service").value = serviceName;
+            document.getElementById("selected-preco").value = servicePrice;
+
+            bookingForm.style.display = "block";
+        }
+
+        // Função para esconder a caixa de agendamento
+        function hideBookingForm() {
+            const bookingForm = document.getElementById("booking-form");
+            bookingForm.style.display = "none";
+        }
+
+        // Função para finalizar o agendamento e gerar mensagem pré-preenchida no WhatsApp
+        function finalizeBooking() {
+            const customerName = document.getElementById("customer-name").value;
+            const appointmentDate = document.getElementById("appointment-date").value;
+            const appointmentTime = document.getElementById("appointment-time").value;
+            const serviceName = document.getElementById("selected-service").value;
+            const servicePrice = document.getElementById("selected-preco").value;
+
+            // Construir a mensagem pré-preenchida do WhatsApp com os detalhes do agendamento
+            let whatsappMessage = `Olá, gostaria de agendar o seguinte serviço:\n\n`;
+            whatsappMessage += `Cliente: ${customerName}\n`;
+            whatsappMessage += `Serviço: ${serviceName}\n`; // Inserido o nome do serviço
+            whatsappMessage += `Preço: R$ ${servicePrice}\n`; // Inserido o preço do serviço
+            whatsappMessage += `Data do Agendamento: ${appointmentDate}\n`;
+            whatsappMessage += `Horário do Agendamento: ${appointmentTime}\n`;
+
+            // Substituir quebras de linha por "%0A" para a URL do WhatsApp
+            whatsappMessage = encodeURIComponent(whatsappMessage);
+
+            // URL do WhatsApp com a mensagem pré-preenchida
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=19991902123&text=${whatsappMessage}`;
+
+            // Redirecionar para o WhatsApp
+            window.open(whatsappUrl, "_blank"); // Abre em uma nova guia/janela
+        }
+    </script>
+
+    <script>
+        // Slideshow de Imagens
+        let slideIndex = 0;
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Muda a imagem a cada 3 segundos
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
+
